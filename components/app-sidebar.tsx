@@ -3,7 +3,7 @@
 import * as React from "react"
 import {
   Rocket,
-  User,
+  UserRoundSearch,
   Frame,
   LifeBuoy,
   Map,
@@ -60,7 +60,7 @@ const data = {
     {
       title: "Clients",
       url: "/clients",
-      icon: User,
+      icon: UserRoundSearch,
       items: [
         {
           title: "All Clients",
