@@ -38,14 +38,14 @@ const data = {
   navMain: [
     {
       title: "Projects",
-      url: "/projects",
+      url: "#",
       icon: SquareKanban,
       // add isActive to the first item to make it open by default
       isActive: true,
       items: [
         {
           title: "All Projects",
-          url: "#",
+          url: "/projects",
         },
         {
           title: "Create Project",
@@ -59,12 +59,12 @@ const data = {
     },
     {
       title: "Clients",
-      url: "/clients",
+      url: "#",
       icon: UserRoundSearch,
       items: [
         {
           title: "All Clients",
-          url: "#",
+          url: "/clients",
         },
         {
           title: "Create Client",
@@ -78,12 +78,12 @@ const data = {
     },
     {
       title: "Invoices",
-      url: "/invoices",
+      url: "#",
       icon: BadgePoundSterling,
       items: [
         {
           title: "All Invoices",
-          url: "#",
+          url: "/invoices",
         },
         {
           title: "Create Invoice",
@@ -101,12 +101,12 @@ const data = {
     },
     {
       title: "Messages",
-      url: "/messages",
+      url: "#",
       icon: MessageCircle,
       items: [
         {
           title: "Inbox",
-          url: "#",
+          url: "/messages",
         },
         {
           title: "Sent",
