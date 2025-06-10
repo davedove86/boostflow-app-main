@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "name": "Project Alpha",
+    "description": "A groundbreaking project focused on AI development.",
+    "startDate": "2023-01-15",
+    "endDate": "2023-12-15",
+    "status": "ongoing",
+    "thumbnail": "project-alpha.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Project Beta",
+    "description": "An innovative project aimed at improving user experience.",
+    "startDate": "2023-02-01",
+    "endDate": "2023-11-01",
+    "status": "completed",
+    "thumbnail": "project-beta.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Project Gamma",
+    "description": "A research project exploring new technologies.",
+    "startDate": "2023-03-10",
+    "endDate": "2024-03-10",
+    "status": "ongoing",
+    "thumbnail": "project-gamma.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Project Delta",
+    "description": "A collaborative project with multiple stakeholders.",
+    "startDate": "2023-04-20",
+    "endDate": null,
+    "status": "ongoing",
+    "thumbnail": null
+  },
+  {
+    "id": 5,
+    "name": "Project Epsilon",
+    "description": null,
+    "startDate": null,
+    "endDate": null,
+    "status": null,
+    "thumbnail": null
+  }
+]

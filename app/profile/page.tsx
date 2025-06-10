@@ -1,4 +1,3 @@
-
 import { AppSidebar } from "@/components/app-sidebar"
 import { ModeToggle } from '@/components/modeToggle'
 import {
@@ -28,6 +27,9 @@ import {
 } from "@/components/ui/table"
 
 import { Badge } from "@/components/ui/badge"
+
+import invoices from "@/data/invoices.json"
+import projects from "@/data/projects.json"
 
 export default function Page() {
   return (
@@ -82,8 +84,15 @@ export default function Page() {
                 <div className=""></div>
               </div>
             </div>
-            <div className="bg-muted aspect-video rounded-xl" />
-            <div className="bg-muted aspect-video rounded-xl" />
+            <div className="bg-muted aspect-video rounded-xl">
+              <h2 className="text-lg font-bold mb-2">Your Projects</h2>
+              <ul className="space-y-2">
+                {projects.map((project) => (
+                  <li key={project.name} className="flex items-center gap-2">{project.name}</li>
+                ))}
+              </ul>
+            </div>
+            <div className="bg-muted aspect-video rounded-xl"></div>
           </div>
           <div className="bg-muted min-h-[100vh] flex-1 rounded-xl md:min-h-min">
           <Table>
@@ -97,42 +106,27 @@ export default function Page() {
               </TableRow>
             </TableHeader>
             <TableBody>
-              <TableRow>
-                <TableCell className="font-medium">INV001</TableCell>
-                <TableCell><Badge variant="default" className="bg-blue-500 text-white dark:bg-blue-500">Paid</Badge></TableCell>
-                <TableCell>Bank Transfer</TableCell>
-                <TableCell className="text-right">£100.00</TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell className="font-medium">INV002</TableCell>
-                <TableCell><Badge variant="default" className="bg-blue-500 text-white dark:bg-blue-500">Paid</Badge></TableCell>
-                <TableCell>Credit Card</TableCell>
-                <TableCell className="text-right">£600.00</TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell className="font-medium">INV003</TableCell>
-                <TableCell><Badge variant="default" className="bg-blue-500 text-white dark:bg-blue-500">Paid</Badge></TableCell>
-                <TableCell>Credit Card</TableCell>
-                <TableCell className="text-right">£60.00</TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell className="font-medium">INV004</TableCell>
-                <TableCell><Badge variant="default" className="bg-blue-500 text-white dark:bg-blue-500">Paid</Badge></TableCell>
-                <TableCell>Bank Transfer</TableCell>
-                <TableCell className="text-right">£300.00</TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell className="font-medium">INV005</TableCell>
-                <TableCell><Badge variant="default" className="bg-red-400 text-white dark:bg-red-400">Unpaid</Badge></TableCell>
-                <TableCell>None</TableCell>
-                <TableCell className="text-right">£450.00</TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell className="font-medium">INV006</TableCell>
-                <TableCell><Badge variant="default" className="bg-red-400 text-white dark:bg-red-400">Unpaid</Badge></TableCell>
-                <TableCell>None</TableCell>
-                <TableCell className="text-right">£150.00</TableCell>
-              </TableRow>
+              {invoices.map((invoice) => (
+                <TableRow key={invoice.id}>
+                  <TableCell className="font-medium">{invoice.number}</TableCell>
+                  <TableCell>
+                    <Badge
+                      variant="default"
+                      className={
+                        invoice.status === "paid"
+                          ? "bg-blue-500 text-white dark:bg-blue-500"
+                          : "bg-red-400 text-white dark:bg-red-400"
+                      }
+                    >
+                      {invoice.status.charAt(0).toUpperCase() + invoice.status.slice(1)}
+                    </Badge>
+                  </TableCell>
+                  <TableCell>{invoice.method}</TableCell>
+                  <TableCell className="text-right">
+                    £{invoice.amount.toFixed(2)}
+                  </TableCell>
+                </TableRow>
+              ))}
             </TableBody>
           </Table>
           </div>

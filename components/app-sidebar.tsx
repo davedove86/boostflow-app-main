@@ -27,6 +27,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
+import Link from 'next/link'
 
 const data = {
   user: {
@@ -51,10 +52,10 @@ const data = {
           title: "Create Project",
           url: "#",
         },
-        {
-          title: "Project Groups",
-          url: "#",
-        },
+        // {
+        //   title: "Project Groups",
+        //   url: "#",
+        // },
       ],
     },
     {
@@ -70,10 +71,10 @@ const data = {
           title: "Create Client",
           url: "#",
         },
-        {
-          title: "Client Groups",
-          url: "#",
-        },
+        // {
+        //   title: "Client Groups",
+        //   url: "#",
+        // },
       ],
     },
     {
@@ -161,7 +162,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         <SidebarMenu>
           <SidebarMenuItem>
             <SidebarMenuButton size="lg" asChild>
-              <a href="/dashboard">
+              <Link href="/dashboard">
                 <div className="bg-[#2883bf] text-sidebar-primary-foreground flex aspect-square size-8 items-center justify-center rounded-lg">
                   <Rocket className="size-4" />
                 </div>
@@ -169,14 +170,14 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                   <span className="truncate font-medium">BoostFlow</span>
                   <span className="truncate text-xs">Your Clients Connected</span>
                 </div>
-              </a>
+              </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>
         </SidebarMenu>
       </SidebarHeader>
       <SidebarContent>
         <NavMain items={data.navMain} />
-        {/* Uncomment the line below to include projects in the sidebar */}
+        {/* Uncomment the line below to include project navigation in the sidebar */}
         {/* <NavProjects projects={data.projects} /> */}
         <NavSecondary items={data.navSecondary} className="mt-auto" />
       </SidebarContent>

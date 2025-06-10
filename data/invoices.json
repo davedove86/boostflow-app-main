@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "number": "INV001",
+    "date": "2023-10-01",
+    "dueDate": "2023-10-15",
+    "customer": "John Doe",
+    "amount": 100.0,
+    "method": "Bank Transfer",
+    "status": "paid"
+  },
+  {
+    "id": 2,
+    "number": "INV002",
+    "date": "2023-10-05",
+    "dueDate": "2023-10-20",
+    "customer": "Jane Smith",
+    "amount": 200.0,
+    "method": "Credit Card",
+    "status": "unpaid"
+  },
+  {
+    "id": 3,
+    "number": "INV003",
+    "date": "2023-10-10",
+    "dueDate": "2023-10-25",
+    "customer": "Alice Johnson",
+    "amount": 150.0,
+    "method": "PayPal",
+    "status": "paid"
+  },
+  {
+    "id": 4,
+    "number": "INV004",
+    "date": "2023-10-15",
+    "dueDate": "2023-10-30",
+    "customer": "Bob Brown",
+    "amount": 300.0,
+    "method": "Bank Transfer",
+    "status": "unpaid"
+  },
+  {
+    "id": 5,
+    "number": "INV005",
+    "date": "2023-10-20",
+    "dueDate": "2023-11-04",
+    "customer": "Charlie Green",
+    "amount": 250.0,
+    "method": "Credit Card",
+    "status": "paid"
+  },
+  {
+    "id": 6,
+    "number": "INV006",
+    "date": "2023-10-25",
+    "dueDate": "2023-11-09",
+    "customer": "Diana Prince",
+    "amount": 175.0,
+    "method": "PayPal",
+    "status": "unpaid"
+  },
+  {
+    "id": 7,
+    "number": "INV007",
+    "date": "2023-10-30",
+    "dueDate": "2023-11-14",
+    "customer": "Ethan Hunt",
+    "amount": 400.0,
+    "method": "Bank Transfer",
+    "status": "paid"
+  },
+  {
+    "id": 8,
+    "number": "INV008",
+    "date": "2023-11-01",
+    "dueDate": "2023-11-16",
+    "customer": "Fiona Gallagher",
+    "amount": 120.0,
+    "method": "Credit Card",
+    "status": "unpaid"
+  },
+  {
+    "id": 9,
+    "number": "INV009",
+    "date": "2023-11-05",
+    "dueDate": "2023-11-20",
+    "customer": "George Costanza",
+    "amount": 90.0,
+    "method": "PayPal",
+    "status": "paid"
+  },
+  {
+    "id": 10,
+    "number": "INV010",
+    "date": "2023-11-10",
+    "dueDate": "2023-11-25",
+    "customer": "Hannah Montana",
+    "amount": 220.0,
+    "method": "Bank Transfer",
+    "status": "unpaid"
+  }
+]
