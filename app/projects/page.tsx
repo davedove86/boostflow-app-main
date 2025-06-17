@@ -15,6 +15,8 @@ import {
   SidebarTrigger,
 } from "@/components/ui/sidebar"
 
+import projects from "@/data/projects.json"
+
 export default function Page() {
   return (
     <SidebarProvider>
@@ -46,12 +48,23 @@ export default function Page() {
         <div className="flex flex-1 flex-col gap-4 p-4 pt-0">
           <div className="grid auto-rows-min gap-4 md:grid-cols-3">
             <div className="bg-muted/50 aspect-video rounded-xl p-2">
-              <h3>Projects</h3>
             </div>
             <div className="bg-muted/50 aspect-video rounded-xl" />
             <div className="bg-muted/50 aspect-video rounded-xl" />
           </div>
-          <div className="bg-muted/50 min-h-[100vh] flex-1 rounded-xl md:min-h-min" />
+          <div className="bg-muted/50 min-h-[100vh] flex-1 rounded-xl md:min-h-min">
+            <div className="p-4">
+              <h2 className="text-xl font-semibold">Projects</h2>
+              <ul className="mt-4 space-y-2">
+                {projects.map((project) => (
+                  <li key={project.id} className="p-2 hover:bg-muted/70 rounded-lg">
+                    <h3 className="text-lg font-medium">{project.name}</h3>
+                    <p className="text-sm text-muted-foreground">{project.description}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </div>
       </SidebarInset>
     </SidebarProvider>

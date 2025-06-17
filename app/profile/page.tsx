@@ -84,17 +84,70 @@ export default function Page() {
                 <div className=""></div>
               </div>
             </div>
-            <div className="bg-muted aspect-video rounded-xl">
-              <h2 className="text-lg font-bold mb-2">Your Projects</h2>
+            <div className="bg-muted aspect-video rounded-xl p-4">
+              <h2 className="text-sm font-bold mb-2">Your Projects</h2>
               <ul className="space-y-2">
                 {projects.map((project) => (
                   <li key={project.name} className="flex items-center gap-2">{project.name}</li>
                 ))}
               </ul>
             </div>
-            <div className="bg-muted aspect-video rounded-xl"></div>
+            <div className="bg-muted aspect-video rounded-xl p-4 flex flex-col gap-4">
+            <h2 className="text-sm font-bold mb-2">Clients</h2>
+                <div className="shadow-md rounded-md p-2 bg-white">
+                  <ul className="space-y-2">
+                    <div className="flex items-center gap-2">
+                      <Image
+                        src="/john-doe.jpg"
+                        alt="John Doe"
+                        width={40}
+                        height={40}
+                        className="rounded-full object-cover"
+                      />
+                      <div className='flex flex-col'>
+                        <span className="font-semibold">John Doe</span>
+                        <span className="text-sm text-muted-foreground">Freelance Writer</span>
+                      </div>
+                    </div>
+                  </ul>
+                </div>
+                <div className="shadow-md rounded-md p-2 bg-white">
+                  <ul className="space-y-2">
+                    <div className="flex items-center gap-2">
+                      <Image
+                        src="/john-doe.jpg"
+                        alt="John Doe"
+                        width={40}
+                        height={40}
+                        className="rounded-full object-cover"
+                      />
+                      <div className='flex flex-col'>
+                        <span className="font-semibold">John Doe</span>
+                        <span className="text-sm text-muted-foreground">Business Owner</span>
+                      </div>
+                    </div>
+                  </ul>
+                </div>
+                <div className="shadow-md rounded-md p-2 bg-white">
+                  <ul className="space-y-2">
+                    <div className="flex items-center gap-2">
+                      <Image
+                        src="/john-doe.jpg"
+                        alt="John Doe"
+                        width={40}
+                        height={40}
+                        className="rounded-full object-cover"
+                      />
+                      <div className='flex flex-col'>
+                        <span className="font-semibold">John Doe</span>
+                        <span className="text-sm text-muted-foreground">Designer</span>
+                      </div>
+                    </div>
+                  </ul>
+                </div>
+            </div>
           </div>
-          <div className="bg-muted min-h-[100vh] flex-1 rounded-xl md:min-h-min">
+          <div className="bg-muted min-h-[100vh] flex-1 rounded-xl md:min-h-min p-4">
           <Table>
             <TableCaption>A list of your recent invoices.</TableCaption>
             <TableHeader>
